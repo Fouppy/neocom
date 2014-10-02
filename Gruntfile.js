@@ -316,6 +316,17 @@ module.exports = function (grunt) {
             }
         },
 
+        shell: {
+            options: {
+                stdout: true,
+                stderr: true,
+                failOnError: true
+            },
+            deploy: {
+                command: "rsync -e 'ssh' dist/ root@egzpo.com:/var/www/neocom.egzpo.com/wp-content/themes/neocom --recursive --delete"
+            }
+        }
+
         
     });
 
@@ -360,6 +371,7 @@ module.exports = function (grunt) {
         grunt.loadNpmTasks('grunt-csso');
         grunt.loadNpmTasks('grunt-wp-assets');
         grunt.loadNpmTasks('grunt-contrib-copy');
+        grunt.loadNpmTasks('grunt-shell');
 
         // execute the task
         grunt.task.run(
@@ -374,7 +386,8 @@ module.exports = function (grunt) {
             'copy:dist',
             'version',
             'copy:baseProd',
-            'copy:configDist'
+            'copy:configDist',
+            'shell'
         );
 
     });
