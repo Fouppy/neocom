@@ -1,0 +1,50 @@
+/* STRUCTURE */
+.container {
+	width: 100%;
+	margin: 20px auto;
+	@include breakpoint(biggie) {
+		width: $pageWidth;
+	}
+}
+
+/* HEADER */
+.banner {
+
+}
+.brand {
+
+}
+
+/* NAV */
+.nav-main {
+
+}
+
+/* MAIN */
+.main {
+
+}
+
+/* SIDEBAR */
+.sidebar {
+
+}
+
+/* FOOTER */
+.content-info {
+
+}
+
+/****************************************
+PAGE TEMPLATES
+*****************************************/
+
+/* Home Page */
+.home {
+
+}
+
+/* Blog Page */
+.blog {
+	
+}
