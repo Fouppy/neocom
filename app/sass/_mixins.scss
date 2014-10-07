@@ -287,7 +287,7 @@
 // @include breakpoint(tablet) { SCSS here };
 @mixin breakpoint($point) {
   @if $point == biggie {
-    @media (min-width : 960px) { @content; }
+    @media (min-width : 1280px) { @content; }
   }
   @if $point == tablet {
     @media (min-width : 600px) { @content; }
@@ -304,4 +304,19 @@
     (min-resolution: #{$dpi}dpi) { 
         @content;
     }
+}
+
+@mixin fw($weight) {
+  @if $weight == light {
+    font-weight: 300;
+  }
+  @if $weight == normal {
+    font-weight: 400;
+  }
+  @if $weight == semibold {
+    font-weight: 600;
+  }
+  @if $weight == bold {
+    font-weight: 700;
+  }
 }

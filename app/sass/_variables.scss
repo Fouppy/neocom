@@ -7,28 +7,29 @@
 // --------------------------------------------------
 
 // Structure
-$pageWidth: 960px;
+$pageWidth: 1280px;
 
 // Box-sizing
 $boxModel:              border-box !default;
 
 // Links
-$linkColor:             #08c !default;
-$linkColorHover:        darken($linkColor, 15) !default;
+$linkColor:             #0a3c51 !default;
+$linkColorHover:        #0a3c51 !default;
+// $linkColorHover:        darken($linkColor, 15) !default;
 
 // Grays
 $black:                 #000 !default;
 $grayDarker:            #222 !default;
-$grayDark:              #333 !default;
-$gray:                  #555 !default;
+$grayDark:              #58595b !default;
+$gray:                  #636466 !default;
 $grayLight:             #999 !default;
 $grayLighter:           #eee !default;
 $white:                 #fff !default;
 
 // Accent colors
-$blue:                  #049cdb !default;
+$blue:                  #0a3c51 !default;
 $blueDark:              #0064cd !default;
-$green:                 #46a546 !default;
+$green:                 #9cebc6 !default;
 $red:                   #9d261d !default;
 $yellow:                #ffc40d !default;
 $orange:                #f89406 !default;
@@ -40,8 +41,8 @@ $selectionColor: orange;
 $selectionTextColor: #fff;
 
 // Typography
-$baseFontSize:          14px !default;
-$baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$baseFontSize:          16px !default;
+$baseFontFamily:        "Source Sans Pro", Helvetica, Arial, sans-serif !default;
 $baseLineHeight:        $baseFontSize * 1.5 !default;
 $textColor:             $grayDark !default;
 

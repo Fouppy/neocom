@@ -19,10 +19,10 @@ define('POST_EXCERPT_LENGTH', 40); // length in words for excerpt_length filter 
 function egzpo_main_class() {
   if (egzpo_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'column-12-hand column-8-desk';
+    $class = 'col-xs-12 col-sm-8 col-lg-8';
   } else {
     // Classes on full width pages
-    $class = 'column-12-hand';
+    $class = 'col-xs-12';
   }
 
   return $class;
@@ -32,7 +32,7 @@ function egzpo_main_class() {
  * .sidebar classes
  */
 function egzpo_sidebar_class() {
-  return 'column-12-hand column-4-desk';
+  return 'col-xs-12 col-sm-4 col-lg-4';
 }
 
 /**
@@ -54,7 +54,8 @@ function egzpo_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page'
+      'is_front_page',
+      'is_single'
     ),
     /**
      * Page template checks (via is_page_template())
