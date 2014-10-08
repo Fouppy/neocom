@@ -1,0 +1,141 @@
+.blue-wb-left, .blue-wb-right {
+
+	@include breakpoint(tablet) {
+		display: flex;
+	}
+
+	.half-container {
+
+		@include breakpoint(tablet) {
+			flex-basis: 50%;
+		}
+
+		&>div {
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 30px;
+			padding-bottom: 15px;
+
+			@include breakpoint(tablet) {
+				width: 100%;
+				padding: 50px 3% 15px;
+			}
+
+			@include breakpoint(biggie) {
+				width: 640px;
+				float: right;
+			}
+		}
+
+		@include breakpoint(biggie) {
+			&:last-child>div {
+				float: left;
+			}
+		}
+
+		&:first-child {
+			background: $blue url('../img/bkg/bkg-blue.png');
+
+			@include breakpoint(tablet) {
+				background-position: right;
+			}
+		}
+	}
+
+	.btn {
+		padding: 1rem .5rem;
+		margin-top: 35px;
+	}
+
+	h3 {
+		@include rem(font-size, 36px);
+		text-transform: uppercase;
+	}
+
+	h4 {
+		@include fw(bold);
+		@include rem(font-size, 16px);
+		@include rem(margin-bottom, 24px);
+		font-family: $baseFontFamily;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+
+	.extrait, .liste {
+		text-align: left;
+		flex-basis: 50%;
+		padding-right: 2%;
+	}
+
+	.liste {
+		padding-left: 2%;
+		padding-right: 0;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			@include rem(margin-bottom, 10px);
+			@include fw(bold);
+			font-style: italic;
+			color: $blue;
+			&:before {
+				content:"•";
+				margin-right: 10px;
+				color: $green;
+			}
+		}
+	}
+
+}
+
+.blue-wb-left {
+	.half-container > div:last-child {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+.blue-wb-right {
+
+	.half-container {
+
+		@include breakpoint(tablet) {
+
+			&:first-child {
+				order: 2;
+			}
+		}
+
+		&>div {
+
+			@include breakpoint(biggie) {
+				float: left;
+			}
+
+			&:last-child {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+		}
+
+		@include breakpoint(biggie) {
+			&:last-child>div {
+				float: right;
+			}
+		}
+
+		&:first-child {
+
+			@include breakpoint(tablet) {
+				background-position: left;
+			}
+		}
+	}
+}

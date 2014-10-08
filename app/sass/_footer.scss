@@ -1,0 +1,148 @@
+.content-info {
+
+	padding: 10px 0;
+	text-align: center;
+
+	h1 {
+		@include rem(font-size, 24px);
+		@include rem(margin-bottom, 32px);
+		text-transform: none;
+	}
+
+	h2 {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 18px);
+		@include rem(margin-bottom, 18px);
+		font-family: $baseFontFamily;
+		@include fw(semibold);
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.container > div {
+
+		@include breakpoint(tablet) {
+			width: 100%;
+			display: table;
+		}
+	}
+
+	.contact-info {
+		@include rem(margin, 32px auto 0);
+		@include rem(padding-bottom, 16px);
+		border-bottom: 1px solid $white;
+
+		div {
+			width: 100%;
+
+			@include breakpoint(tablet) {
+				display: table-cell;
+				width: 33.33%;
+				vertical-align: bottom;
+			}
+
+			&:nth-child(2) {
+				display: none;
+
+				@include breakpoint(tablet) {
+					display: table-cell;
+				}
+			}
+
+			&:first-child {
+
+				@include breakpoint(tablet) {
+					text-align: left;
+				}
+			}
+
+			&:last-child {
+
+				@include breakpoint(tablet) {
+					text-align: right;
+				}
+			}
+		}
+
+		p {
+			@include rem(font-size, 16px);
+
+			@include breakpoint(tablet) {
+				@include rem(font-size, 18px);
+			}
+
+			@include fw(light);
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				display: inline-block;
+				width: 34px;
+				margin: 0 5px;
+
+				@include breakpoint(biggie) {
+					width: 40px;
+				}
+			}
+
+			a {
+				display: block;
+
+				.style0 {
+					fill: $white;
+					transition: all 0.3s ease-in-out;
+				}
+
+				&:hover .style0 {
+					fill: $green;
+				}
+			}
+
+			svg {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
+	}
+
+	.footer {
+		@include rem(margin, 16px auto 0);
+
+		@include breakpoint(tablet) {
+			display: table;
+		}
+
+		div {
+
+			&:first-child {
+				text-align: left;
+
+				@include breakpoint(tablet) {
+					display: table-cell;
+					width: 70%;
+				}
+			}
+
+			&:last-child {
+				text-align: left;
+
+				@include breakpoint(tablet) {
+					display: table-cell;
+					text-align: right;
+					width: 30%;
+				}
+			}
+		}
+
+		p {
+			@include rem(font-size, 12px);
+		}
+	}
+}

@@ -264,21 +264,22 @@ add_filter('get_search_form', 'egzpo_get_search_form');
  * Add favicons to head
  */
 function egzpo_favicon_link() {
-  echo "<link rel='shortcut icon' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/favicon.ico' />" . "\n";
-  // For iPad with high-resolution Retina display running iOS ≥ 7
-  echo "<link rel='apple-touch-icon-precomposed' sizes='152x152' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/apple-touch-icon-152x152-precomposed.png' />" . "\n";
-  // For iPad with high-resolution Retina display running iOS ≤ 6
-  echo "<link rel='apple-touch-icon-precomposed' sizes='144x144' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/apple-touch-icon-144x144-precomposed.png' />" . "\n";
-  // For iPhone with high-resolution Retina display running iOS ≥ 7
-  echo "<link rel='apple-touch-icon-precomposed' sizes='120x120' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/apple-touch-icon-120x120-precomposed.png' />" . "\n";
-  // For iPhone with high-resolution Retina display running iOS ≤ 6
-  echo "<link rel='apple-touch-icon-precomposed' sizes='114x114' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/apple-touch-icon-114x114-precomposed.png' />" . "\n";
-  // For the iPad mini and the first- and second-generation iPad on iOS ≥ 7
-  echo "<link rel='apple-touch-icon-precomposed' sizes='76x76' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/apple-touch-icon-76x76-precomposed.png' />" . "\n";
-  // For the iPad mini and the first- and second-generation iPad on iOS ≤ 6
-  echo "<link rel='apple-touch-icon-precomposed' sizes='72x72' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/apple-touch-icon-72x72-precomposed.png' />" . "\n";
-  // For non-Retina iPhone, iPod Touch, and Android 2.1+ devices
-  echo "<link rel='apple-touch-icon-precomposed' href='" . get_stylesheet_directory_uri() . "/assets/img/favicons/apple-touch-icon-precomposed.png' />" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='57x57' href='/apple-touch-icon-57x57.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='114x114' href='/apple-touch-icon-114x114.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='72x72' href='/apple-touch-icon-72x72.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='144x144' href='/apple-touch-icon-144x144.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='60x60' href='/apple-touch-icon-60x60.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='120x120' href='/apple-touch-icon-120x120.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='76x76' href='/apple-touch-icon-76x76.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='152x152' href='/apple-touch-icon-152x152.png'>" . "\n";
+  echo "<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon-180x180.png'>" . "\n";
+  echo "<link rel='icon' type='image/png' href='/favicon-196x196.png' sizes='196x196'>" . "\n";
+  echo "<link rel='icon' type='image/png' href='/favicon-160x160.png' sizes='160x160'>" . "\n";
+  echo "<link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96'>" . "\n";
+  echo "<link rel='icon' type='image/png' href='/favicon-16x16.png' sizes='16x16'>" . "\n";
+  echo "<link rel='icon' type='image/png' href='/favicon-32x32.png' sizes='32x32'>" . "\n";
+  echo "<meta name='msapplication-TileColor' content='#9ee9c5'>" . "\n";
+  echo "<meta name='msapplication-TileImage' content='/mstile-144x144.png'>" . "\n";
 }
 add_action( 'wp_head', 'egzpo_favicon_link' );
 

@@ -6,6 +6,9 @@
 	<title><?php wp_title('|', true, 'right'); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<script src="//use.typekit.net/ukr8okj.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
 	<?php wp_head(); ?>
 
 	<link href='//ajax.googleapis.com' rel='dns-prefetch' />

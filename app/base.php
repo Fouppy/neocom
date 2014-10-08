@@ -12,18 +12,20 @@
     get_template_part('templates/header');
   ?>
 
-  <div class="wrap container" role="document">
-    <div class="content grid row">
-      <main class="main <?php echo egzpo_main_class(); ?>" role="main">
+  <div class="content" role="document">
+    <?php if (egzpo_display_sidebar()) : ?>
+      <main class="main" role="main">
         <?php include egzpo_template_path(); ?>
       </main><!-- /.main -->
-      <?php if (egzpo_display_sidebar()) : ?>
-        <aside class="sidebar <?php echo egzpo_sidebar_class(); ?>" role="complementary">
-          <?php include egzpo_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+      <aside class="sidebar" role="complementary">
+        <?php include egzpo_sidebar_path(); ?>
+      </aside><!-- /.sidebar -->
+    <?php else : ?>
+      <main class="main" role="main">
+        <?php include egzpo_template_path(); ?>
+      </main><!-- /.main -->
+    <?php endif; ?>
+  </div><!-- /.content -->
 
   <?php get_template_part('templates/footer'); ?>
   <!-- browserSync -->

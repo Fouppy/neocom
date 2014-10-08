@@ -1,23 +1,35 @@
 /* STRUCTURE */
 .container {
-	width: 100%;
-	margin: 20px auto;
+	width: 90%;
+	margin: 0 auto;
 	@include breakpoint(biggie) {
 		width: $pageWidth;
 	}
 }
 
-/* HEADER */
-.banner {
+.blue {
+	background: $blue;
+	color: $white;
 
+	h1 {
+		color: $white;
+	}
+
+	a {
+		color: $green;
+
+		&:hover {
+			color: $green;
+		}
+	}
 }
-.brand {
 
-}
+.green {
+	background: $green;
 
-/* NAV */
-.nav-main {
-
+	h2 {
+		color: $white;
+	}
 }
 
 /* MAIN */
@@ -27,11 +39,6 @@
 
 /* SIDEBAR */
 .sidebar {
-
-}
-
-/* FOOTER */
-.content-info {
 
 }
 

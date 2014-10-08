@@ -126,34 +126,35 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: bold;
-  color: $grayDark;
+  font-weight: 500;
+  font-style: italic;
+  font-family: "magneta";
   text-rendering: optimizelegibility;
-  small {
-    font-weight: normal;
-    color: $grayLight;
-  }
 }
 h1 {
   @include rem(font-size, 30px);
   @include rem(line-height, $baseLineHeight * 2);
-  small {
-    @include rem(font-size, 18px);
+  text-transform: uppercase;
+  color: $blue;
+
+  @include breakpoint(biggie) {
+    @include rem(font-size, 36px);
+    text-transform: none;
   }
 }
 h2 {
-  @include rem(font-size, 24px);
+  @include rem(font-size, 36px);
   @include rem(line-height, $baseLineHeight * 2);
-  small {
-    @include rem(font-size, 18px);
+  color: $green;
+
+  @include breakpoint(biggie) {
+    @include rem(font-size, 30px);
   }
 }
 h3 {
+  @include rem(font-size, 26px);
   @include rem(line-height, $baseLineHeight * 1.5);
-  @include rem(font-size, 18px);
-  small {
-    @include rem(font-size, 14px);
-  }
+  color: $white;
 }
 h4,
 h5,
@@ -162,17 +163,12 @@ h6 {
 }
 h4 {
   @include rem(font-size, 14px);
-  small {
-    @include rem(font-size, 12px);
-  }
 }
 h5 {
   @include rem(font-size, 12px);
 }
 h6 {
   @include rem(font-size, 11px);
-  color: $grayLight;
-  text-transform: uppercase;
 }
 
 // LISTS

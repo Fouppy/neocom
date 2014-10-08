@@ -1,0 +1,181 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+.banner {
+	border-top: 5px solid $green;
+	display: flex;
+	flex-direction: column;
+
+	.home & {
+		height: 100%;
+		position: relative;
+		justify-content: space-between;
+
+		background: url('../img/bkg/bkg-home-1.jpg');
+		background-size: cover;
+		background-position: 50%;
+
+
+		&:after {
+			content: "";
+			display: block;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 0;
+			background: url('../img/bkg/bkg-header.png');
+		}
+	}
+}
+
+.prehead {
+
+	order: 2;
+
+	.home & {
+		// position: absolute;
+		// width: 100%;
+		z-index: 1;
+		order: 0;
+	}
+}
+
+.brand {
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+	// height: 100%;
+	z-index: 1;
+	margin: 50px auto;
+
+	a {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 300px;
+		display: block;
+		@include breakpoint(tablet) {
+			width: 300px;
+		}
+
+		svg {
+			width:100%;
+			margin: 0 auto;
+			height:100%;
+			display: block;
+			@include breakpoint(tablet) {
+				width:300px;
+				height: 92px;
+			}
+		}
+	}
+
+	.home & {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+	}
+
+	.home & a {
+		max-width: 400px;
+
+		@include breakpoint(tablet) {
+			width: 400px;
+		}
+
+		svg {
+			@include breakpoint(tablet) {
+				width:400px;
+				height: 122px;
+			}
+		}
+	}
+}
+
+.nav-main {
+
+	.home & {
+		// position: absolute;
+		width: 100%;
+		background: $white;
+		// bottom: 0;
+		z-index: 1;
+	}
+
+	.nav {
+		// display: table;
+		// width: 100%;
+		text-align: center;
+
+		li {
+			// display: table-cell;
+		// width: calc(100%/6);
+			display: none;
+
+			&.active {
+				display: inline-block;
+			}
+
+			@include breakpoint(tablet) {
+				display: block;
+			}
+		}
+
+		@include breakpoint(tablet) {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			border-bottom: 1px solid $green;
+		}
+
+		a {
+			position: relative;
+			display: block;
+			padding: 12px;
+			text-transform: uppercase;
+			@include fw(semibold);
+			@include rem(font-size, 14px);
+
+			@include breakpoint(tablet) {
+				@include rem(font-size, 12px);
+			}
+
+			@include breakpoint(biggie) {
+				@include rem(font-size, 14px);
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 0;
+				height: 5px;
+				background: $green;
+				transition: all 0.3s ease-in-out;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:hover:before {
+				width: 100%;
+				left: 0;
+			}
+		}
+
+		.active a:before {
+			width: 100%;
+			left: 0;
+		}
+	}
+}

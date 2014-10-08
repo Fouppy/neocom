@@ -1,0 +1,56 @@
+// Buttons
+.btn {
+	color: $blue;
+	padding: 0.5rem;
+	@include rem(font-size, 24px);
+	@include fw(semibold);
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		color: $blue;
+		text-decoration: none;
+	}
+}
+
+.btn-label {
+	position: relative;
+	z-index: 1;
+}
+
+.blue .btn {
+	color: $white;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+
+/*==========================
+FILL
+==========================*/
+
+// Fill from top
+.btn[data-effeckt-type="fill-from-top"] {
+	border-bottom: 1px solid $green;
+
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 5px;
+		background: $green;
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&:hover:before {
+		height: 100%;
+	}
+}
