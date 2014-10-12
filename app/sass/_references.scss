@@ -1,0 +1,81 @@
+.page-template-template-references-php {
+	section {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.toggle-view {
+		display: none;
+		text-transform: uppercase;
+		@include fw(semibold);
+		@include rem(font-size, 18px);
+		color: $blue;
+		@include breakpoint(tablet) {
+			padding: 0 2%;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+
+	.close, .open {
+		color: $green;
+		cursor: pointer;
+	}
+
+	.selected {
+		color: $blue;
+		cursor: default;
+	}
+
+	.toggle-view.bottom {
+		text-align: center;
+		padding: 20px 0 134px;
+		border-bottom: 1px solid $green;
+	}
+
+	.toggle-view.top {
+		margin: 40px 0 20px;
+	}
+
+	.plus, .moins {
+		position: relative;
+
+		&:after {
+			display: block;
+			width: 64px;
+			height: 64px;
+			position: absolute;
+			padding-top: 10px;
+			margin-left: -32px;
+			bottom: -64px;
+			left: 50%;
+		}
+	}
+
+	.plus {
+		&:after {
+			content: url('../img/pictos/plus.png');
+		}
+	}
+
+	.moins {
+		&:after {
+			content: url('../img/pictos/moins.png');
+		}
+	}
+
+	.clients {
+		padding: 50px 0 0;
+		h1 {
+			text-align: center;
+			text-transform: uppercase;
+			@include rem(font-size, 24px);
+			@include rem(line-height, 36px);
+			@include rem(margin-bottom, 36px);
+		}
+	}
+}

@@ -1,0 +1,87 @@
+.page-template-template-service-php {
+	.page-header {
+		h1 {
+			text-align: center;
+
+			@include breakpoint(tablet) {
+				text-transform: uppercase;
+				@include rem(font-size, 48px);
+			}
+		}
+	}
+
+	.main-content, .footer-nav {
+		padding: 40px 0;
+
+		@include breakpoint(tablet) {
+			padding: 50px 2%;
+		}
+	}
+
+	.main-content {
+		border-bottom: 1px solid $green;
+
+		@include breakpoint(biggie) {
+			display: table;
+		}
+	}
+
+	h4 {
+		@include fw(bold);
+		@include rem(font-size, 18px);
+		@include rem(margin-bottom, 27px);
+		font-family: $baseFontFamily;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+
+	.main p {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 27px);
+	}
+
+	section {
+		@include breakpoint(biggie) {
+			display: table-cell;
+			width: 65%;
+			padding-right: 2%;
+		}
+
+	}
+
+	aside {
+		margin-top: 40px;
+
+		@include breakpoint(biggie) {
+			margin-top: 0;
+			display: table-cell;
+			width: 35%;
+			padding-left: 2%;
+		}
+	}
+
+	.footer-nav h1 {
+		text-align: center;
+		text-transform: uppercase;
+		@include rem(font-size, 24px);
+		@include rem(line-height, 36px);
+		@include rem(margin-bottom, 36px);
+	}
+
+	.footer-nav ul {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		li {
+			margin: 20px;
+		}
+	}
+
+	.footer-nav .btn {
+		display: block;
+		width: 250px;
+		padding: 1rem .5rem;
+		text-align: center;
+	}
+}

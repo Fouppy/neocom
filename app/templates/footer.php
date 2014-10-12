@@ -9,11 +9,11 @@
   		</div>
   		<div>
   			<ul>
-  				<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="60px" height="60.001px" viewBox="0 0 60 60.001" enable-background="new 0 0 60 60.001" xml:space="preserve"><path d="M0 0h60v60.001H0V0z M25.765 46.319h6.744V29.998h4.498l0.598-5.624h-5.096 l0.008-2.815c0-1.467 0.139-2.253 2.242-2.253h2.813v-5.625h-4.499c-5.405 0-7.307 2.729-7.307 7.316v3.377h-3.369v5.625h3.369 V46.319z M25.765 46.3" class="style0"/></svg></a></li>
-  				<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="60px" height="60.001px" viewBox="0 0 60 60.001" enable-background="new 0 0 60 60.001" xml:space="preserve"><path d="M0 0h60v60.001H0V0z M25.765 46.319h6.744V29.998h4.498l0.598-5.624h-5.096 l0.008-2.815c0-1.467 0.139-2.253 2.242-2.253h2.813v-5.625h-4.499c-5.405 0-7.307 2.729-7.307 7.316v3.377h-3.369v5.625h3.369 V46.319z M25.765 46.3" class="style0"/></svg></a></li>
-  				<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="60px" height="60.001px" viewBox="0 0 60 60.001" enable-background="new 0 0 60 60.001" xml:space="preserve"><path d="M0 0h60v60.001H0V0z M25.765 46.319h6.744V29.998h4.498l0.598-5.624h-5.096 l0.008-2.815c0-1.467 0.139-2.253 2.242-2.253h2.813v-5.625h-4.499c-5.405 0-7.307 2.729-7.307 7.316v3.377h-3.369v5.625h3.369 V46.319z M25.765 46.3" class="style0"/></svg></a></li>
-  				<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="60px" height="60.001px" viewBox="0 0 60 60.001" enable-background="new 0 0 60 60.001" xml:space="preserve"><path d="M0 0h60v60.001H0V0z M25.765 46.319h6.744V29.998h4.498l0.598-5.624h-5.096 l0.008-2.815c0-1.467 0.139-2.253 2.242-2.253h2.813v-5.625h-4.499c-5.405 0-7.307 2.729-7.307 7.316v3.377h-3.369v5.625h3.369 V46.319z M25.765 46.3" class="style0"/></svg></a></li>
-  				<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="60px" height="60.001px" viewBox="0 0 60 60.001" enable-background="new 0 0 60 60.001" xml:space="preserve"><path d="M0 0h60v60.001H0V0z M25.765 46.319h6.744V29.998h4.498l0.598-5.624h-5.096 l0.008-2.815c0-1.467 0.139-2.253 2.242-2.253h2.813v-5.625h-4.499c-5.405 0-7.307 2.729-7.307 7.316v3.377h-3.369v5.625h3.369 V46.319z M25.765 46.3" class="style0"/></svg></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'facebook.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'twitter.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'google+.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'youtube.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'instagram.svg'); ?></a></li>
   			</ul>	
   		</div>
   		<div>

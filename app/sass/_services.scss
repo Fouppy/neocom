@@ -51,6 +51,10 @@
 	h3 {
 		@include rem(font-size, 36px);
 		text-transform: uppercase;
+		margin: 20px 0;
+		@include breakpoint(tablet) {
+			margin: 50px 0;
+		}
 	}
 
 	h4 {
@@ -71,33 +75,48 @@
 	.liste {
 		padding-left: 2%;
 		padding-right: 0;
-
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-
-		li {
-			@include rem(margin-bottom, 10px);
-			@include fw(bold);
-			font-style: italic;
-			color: $blue;
-			&:before {
-				content:"•";
-				margin-right: 10px;
-				color: $green;
-			}
-		}
 	}
 
 }
 
-.blue-wb-left {
-	.half-container > div:last-child {
+.outcome {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		@include rem(margin-bottom, 10px);
+		@include fw(bold);
+		font-style: italic;
+		color: $blue;
+		&:before {
+			content:"•";
+			margin-right: 10px;
+			color: $green;
+		}
+	}
+}
+
+.blue-wb-left, .blue-wb-right {
+	.half-container > div {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		flex-direction: column;
+	}
+	.half-container:last-child > div {
+		flex-direction: row;
+	}
+
+	.pictos {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			margin: 0 20px;
+		}
 	}
 }
 
@@ -118,11 +137,11 @@
 				float: left;
 			}
 
-			&:last-child {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-			}
+			// &:last-child {
+			// 	display: flex;
+			// 	flex-wrap: wrap;
+			// 	justify-content: center;
+			// }
 		}
 
 		@include breakpoint(biggie) {

@@ -173,9 +173,35 @@ body {
 			}
 		}
 
-		.active a:before {
+		.active a:before, .parent-active a:before {
 			width: 100%;
 			left: 0;
 		}
+	}
+
+	.single-nos-references & .nav .active a:before {
+		width: 0;
+		left: 50%;
+	}
+
+	.single-nos-references & .nav .active {
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+
+	.single-nos-references & .nav .parent-active {
+		display: inline-block;
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
+	}
+
+	.single-nos-references & .nav .active a:hover:before {
+		width: 100%;
+		left: 0;
 	}
 }

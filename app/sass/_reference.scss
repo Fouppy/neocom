@@ -1,0 +1,31 @@
+.single-nos-references {
+
+	.page-header {
+
+		.container {
+			position: relative;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	.post-next, .post-prev {
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+	}
+
+	.post-next {
+		right: 0;
+	}
+
+	.post-prev {
+		left: 0;
+	}
+}

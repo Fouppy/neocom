@@ -40,6 +40,35 @@ var Egzpo = {
     init: function() {
       // JavaScript to be fired on the about us page
     }
+  },
+  nos_references: {
+    init: function() {
+
+      var toggleView = ('.toggle-view'),
+          all = $('.all'),
+          open = $('.open'),
+          close = $('.close'),
+          plus = $('.plus'),
+          moins = $('.moins'),
+          target = all.attr('href');
+
+      $(toggleView).show();
+      $(moins).hide();
+      $(target).hide();
+      $(close).addClass('selected');
+
+
+  
+      $(all).click(function(e){
+        e.preventDefault();
+        $(target).slideToggle();
+        $(moins).toggle();
+        $(plus).toggle();
+        $(open).toggleClass('selected');
+        $(close).toggleClass('selected');
+      });
+
+    }
   }
 };
 

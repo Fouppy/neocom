@@ -13,6 +13,11 @@ if ($pagekids) {
 	<div class="half-container">
 		<div>
 			<h3><?php echo get_the_title($firstchild->ID); ?></h3>
+			<ul class="pictos">
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+			</ul>
 		</div>
 	</div>
 	<div class="half-container">
@@ -22,7 +27,7 @@ if ($pagekids) {
 				<?php echo wpautop(get_post_field('post_excerpt', $firstchild->ID)); ?>
 			</div>
 			<div class="liste">
-	  			<ul>
+	  			<ul class="outcome">
 	  				<?php for($i = 0, $size = count(get_post_meta($firstchild->ID, 'outcome')); $i < $size; ++$i) { ?>
 			  		<li><?php echo get_post_meta($firstchild->ID, 'outcome')[$i]; ?></li>
 			  		<?php } ?>
@@ -36,6 +41,11 @@ if ($pagekids) {
 	<div class="half-container">
 		<div>
 			<h3><?php echo get_the_title($secondchild->ID); ?></h3>
+			<ul class="pictos">
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+			</ul>
 		</div>
 	</div>
 	<div class="half-container">
@@ -45,7 +55,7 @@ if ($pagekids) {
 				<?php echo wpautop(get_post_field('post_excerpt', $secondchild->ID)); ?>
 			</div>
 			<div class="liste">
-	  			<ul>
+	  			<ul class="outcome">
 	  				<?php for($i = 0, $size = count(get_post_meta($secondchild->ID, 'outcome')); $i < $size; ++$i) { ?>
 			  		<li><?php echo get_post_meta($secondchild->ID, 'outcome')[$i]; ?></li>
 			  		<?php } ?>
@@ -59,6 +69,11 @@ if ($pagekids) {
 	<div class="half-container">
 		<div>
 			<h3><?php echo get_the_title($thirdchild->ID); ?></h3>
+			<ul class="pictos">
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+			</ul>
 		</div>
 	</div>
 	<div class="half-container">
@@ -68,7 +83,7 @@ if ($pagekids) {
 				<?php echo wpautop(get_post_field('post_excerpt', $thirdchild->ID)); ?>
 			</div>
 			<div class="liste">
-	  			<ul>
+	  			<ul class="outcome">
 	  				<?php for($i = 0, $size = count(get_post_meta($thirdchild->ID, 'outcome')); $i < $size; ++$i) { ?>
 			  		<li><?php echo get_post_meta($thirdchild->ID, 'outcome')[$i]; ?></li>
 			  		<?php } ?>
@@ -82,6 +97,11 @@ if ($pagekids) {
 	<div class="half-container">
 		<div>
 			<h3><?php echo get_the_title($fourthchild->ID); ?></h3>
+			<ul class="pictos">
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+				<li><?php get_template_part('assets/img/svg/inline', 'conseil_1.svg'); ?></li>
+			</ul>
 		</div>
 	</div>
 	<div class="half-container">
@@ -91,7 +111,7 @@ if ($pagekids) {
 				<?php echo wpautop(get_post_field('post_excerpt', $fourthchild->ID)); ?>
 			</div>
 			<div class="liste">
-	  			<ul>
+	  			<ul class="outcome">
 	  				<?php for($i = 0, $size = count(get_post_meta($fourthchild->ID, 'outcome')); $i < $size; ++$i) { ?>
 			  		<li><?php echo get_post_meta($fourthchild->ID, 'outcome')[$i]; ?></li>
 			  		<?php } ?>

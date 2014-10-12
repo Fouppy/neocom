@@ -166,11 +166,18 @@ module.exports = function (grunt) {
             }
         },
         svgmin: {
+            options: {
+                plugins: [
+                    {
+                        convertStyleToAttrs: false
+                    }
+                ]
+            },
             dist: {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.app %>/assets/img',
-                    src: '{,*/}*.svg',
+                    src: '{,*/}*.{svg,php}',
                     dest: '<%= yeoman.dist %>/assets/img'
                 }]
             }
