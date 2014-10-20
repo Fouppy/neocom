@@ -99,92 +99,33 @@ body {
 	}
 }
 
-.nav-main {
 
-	.home & {
-		// position: absolute;
-		width: 100%;
-		background: $white;
-		// bottom: 0;
-		z-index: 1;
-	}
 
-	.nav {
-		// display: table;
-		// width: 100%;
-		text-align: center;
+/*
+// Navbar.
+*/
 
-		li {
-			// display: table-cell;
-		// width: calc(100%/6);
-			display: none;
+.x-navbar-wrap {
+	z-index: 2;
+	width: 100%;
+	background: $white;
+}
 
-			&.active {
-				display: inline-block;
-			}
+.x-navbar {
+	left: 0;
+	right: 0;
+	overflow: visible;
+	background: $white;
+	z-index:1030;
+	transform:translate3d(0, 0, 0);
+	height: 54px;
 
-			@include breakpoint(tablet) {
-				display: block;
-			}
-		}
-
-		@include breakpoint(tablet) {
-			display: flex;
-			justify-content: space-around;
-			flex-wrap: wrap;
-			border-bottom: 1px solid $green;
-		}
-
-		a {
-			position: relative;
-			display: block;
-			padding: 12px;
-			text-transform: uppercase;
-			@include fw(semibold);
-			@include rem(font-size, 14px);
-
-			@include breakpoint(tablet) {
-				@include rem(font-size, 12px);
-			}
-
-			@include breakpoint(biggie) {
-				@include rem(font-size, 14px);
-			}
-
-			&:before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 50%;
-				width: 0;
-				height: 5px;
-				background: $green;
-				transition: all 0.3s ease-in-out;
-			}
-
-			&:hover {
-				text-decoration: none;
-			}
-
-			&:hover:before {
-				width: 100%;
-				left: 0;
-			}
-		}
-
-		.active a:before, .parent-active a:before {
-			width: 100%;
-			left: 0;
-		}
-	}
-
-	.single-nos-references & .nav .active a:before {
+	.single-nos-references & .x-nav .active a:before {
 		width: 0;
 		left: 50%;
 	}
 
-	.single-nos-references & .nav .active {
+	.single-nos-references & .x-nav .active {
 		display: none;
 
 		@include breakpoint(tablet) {
@@ -192,7 +133,7 @@ body {
 		}
 	}
 
-	.single-nos-references & .nav .parent-active {
+	.single-nos-references & .x-nav .parent-active {
 		display: inline-block;
 
 		@include breakpoint(tablet) {
@@ -200,8 +141,145 @@ body {
 		}
 	}
 
-	.single-nos-references & .nav .active a:hover:before {
+	.single-nos-references & .x-nav .active a:hover:before {
 		width: 100%;
 		left: 0;
 	}
 }
+
+.x-navbar-inner {
+	border-bottom: 1px solid $green;
+}
+
+.x-navbar .x-brand {
+	width: 50px;
+	z-index: 10;
+	float:left;
+	display:inline-block;
+
+	svg {
+		width: 50px;
+		display: block;
+		height: 100%;
+		margin: 7px 0;
+	}
+}
+
+.x-navbar .x-nav {
+	position: relative;
+
+	@include breakpoint(tablet) {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.active a:before, .parent-active a:before {
+		width: 100%;
+		left: 0;
+	}
+
+	li {
+		height: 54px;
+	}
+}
+
+.x-navbar .x-nav > li > a {
+	position: relative;
+	display: block;
+	height: 100%;
+	padding: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	@include fw(semibold);
+	@include rem(font-size, 14px);
+
+	@include breakpoint(tablet) {
+		@include rem(font-size, 12px);
+	}
+
+	@include breakpoint(biggie) {
+		@include rem(font-size, 14px);
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 0;
+		height: 5px;
+		background: $green;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:hover:before {
+		width: 100%;
+		left: 0;
+	}
+}
+
+.x-navbar-fixed-top {
+	position: fixed;
+	top: 0;
+	bottom: auto;
+	z-index:1030;
+	left:0;
+	right:0;
+}
+
+.x-nav-collapse {
+	margin-left: 50px;
+}
+.x-nav-collapse.collapse {
+	position:relative;
+	transition: height 0.3s ease;
+	height:auto;
+	overflow:visible;
+}
+.x-nav-collapse.collapse.in {
+	height:auto;
+}
+
+
+.x-btn-navbar {
+	display:none;
+}
+
+@media (max-width: 719px) {
+	.x-navbar {
+		height: auto;
+	}
+	.collapse {display: none; visibility: hidden;}
+	.collapse.in {display: block; visibility: visible;}
+	.collapsing {position: relative; height: 0; overflow: hidden; transition: all .35s ease;}
+	.x-nav-collapse{display:block;clear:both; margin: 0;}
+	.x-nav-collapse .x-nav{float:none;}
+	.x-nav-collapse,.x-nav-collapse.collapse{overflow:hidden;height:0}
+	.x-btn-navbar{
+		display:inline-block;
+		float:right;
+		// padding:0.458em 0.625em;
+		@include rem(font-size, 2rem);
+		@include rem(line-height, 3rem);
+		height: 54px;
+		line-height: 54px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+[class^="x-icon-"],[class*=" x-icon-"]{display:inline-block;font-family:"fontawesome";font-style:normal;font-weight:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;speak:none}
+[class^="x-icon-"]:before,[class*=" x-icon-"]:before{speak:none;line-height:1}
+a [class^="x-icon-"],a [class*=" x-icon-"]{display:inline-block}
+.nav [class^="x-icon-"],.nav [class*=" x-icon-"]{display:inline;margin-right:0.5em}
+li [class^="x-icon-"],li [class*=" x-icon-"],.nav li [class^="x-icon-"],.nav li [class*=" x-icon-"]{display:inline-block;width:1.25em;text-align:center}
+.x-icon-bars:before{content:"\f0c9"}
+@font-face{font-family:'fontawesome';src:url("../fonts/font-awesome.eot?v=4.0.3");src:url("../fonts/font-awesome.eot?#iefix&v=4.0.3") format("embedded-opentype"),url("../fonts/font-awesome.woff?v=4.0.3") format("woff"),url("../fonts/font-awesome.ttf?v=4.0.3") format("truetype"),url("../fonts/font-awesome.svg?#fontawesome&v=4.0.3") format("svg");font-weight:normal;font-style:normal}
+

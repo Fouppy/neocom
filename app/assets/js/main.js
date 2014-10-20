@@ -27,6 +27,29 @@ var Egzpo = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      jQuery(document).ready(function($) {
+
+        var $window     = $(window);
+        var $this       = $(this);
+        var $body       = $('body');
+        var $navbar     = $('.x-navbar');
+        var $navbarWrap = $('.x-navbar-wrap');
+
+        $window.scroll(function() {
+          var $menutop = $navbarWrap.offset().top - $navbar.outerHeight();
+          var $current = $this.scrollTop();
+          if ($current >= $menutop) {
+            $navbar.addClass('x-navbar-fixed-top');
+          } else {
+            $navbar.removeClass('x-navbar-fixed-top');
+          }
+        });
+
+        $('.x-btn-navbar').click(function(e){
+          e.preventDefault();
+        });
+
+      });
     }
   },
   // Home page

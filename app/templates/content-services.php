@@ -3,10 +3,10 @@
 $pagekids = get_pages("child_of=".$post->ID."&sort_column=menu_order");
 
 if ($pagekids) {
-	$firstchild = $pagekids[2];
-	$secondchild = $pagekids[3];
-	$thirdchild = $pagekids[0];
-	$fourthchild = $pagekids[1];
+	$firstchild = $pagekids[0];
+	$secondchild = $pagekids[1];
+	$thirdchild = $pagekids[2];
+	$fourthchild = $pagekids[3];
 }
 ?>
 <div class="blue-wb-left">
