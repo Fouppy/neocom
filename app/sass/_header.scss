@@ -38,11 +38,153 @@ body {
 
 	order: 2;
 
+	width: 100%;
+	left: 0;
+	right: 0;
+
 	.home & {
 		// position: absolute;
 		// width: 100%;
-		z-index: 1;
+		z-index: 2;
 		order: 0;
+		position: fixed;
+		top: 0;
+	}
+
+	.container {
+		display: table;
+
+		& > div {
+			display: table-cell;
+			vertical-align: middle;
+
+			&:nth-child(2) {
+				display: none;
+				text-align: right;
+
+				@include breakpoint(tablet) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	ul {		
+		list-style: none;
+		padding: 0;
+		margin: 12px 0;
+		display: inline-block;
+		vertical-align: middle;
+
+		&:before {			
+			content: "";
+			width: 1px;
+			height: 22px;
+			background: $blue;
+			display: inline-block;
+			margin: 0 10px;
+
+			.home & {
+				background: $white;
+			}
+		}
+	}
+
+	li {
+		width: 22px;
+		display: inline-block;
+		margin: 0 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		a {
+			display: block;
+
+			&:hover .style0 {
+				fill: $blue;
+
+				.home & {
+					fill: $white;
+				}
+			}
+		}
+	}
+
+	p {
+		display: inline-block;
+		margin: 12px 0;
+		@include fw(semibold);
+		color: $gray;
+		text-transform: uppercase;
+		@include rem(font-size, 14px);
+		transition: all 0.3s ease-in-out;
+
+		.home & {
+			color: $blue;
+		}
+	}
+
+	svg {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+
+	.style0 {
+		fill: $green;
+		transition: all .3s ease-in-out;
+
+		.home & {
+			fill: $blue;
+		}
+	}
+
+	.access {
+		@include fw(semibold);
+		color: $gray;
+		text-transform: uppercase;
+		font-style: italic;
+		@include rem(font-size, 14px);
+		transition: all 0.3s ease-in-out;
+
+		display: block;
+		text-align :center;
+		padding: 12px 0;
+
+		@include breakpoint(tablet) {
+			display: inline-block;;
+			text-align: left;
+			padding: 6px 6px 6px 0;
+		}
+
+		.home & {
+			color: $blue;
+		}
+	}
+
+	&.prehead-fixed {
+		position: fixed;
+		top: 54px;
+		z-index: 2;
+		background: $white;
+
+		ul:before {
+			background: $blue;
+		}
+
+		.style0 {
+			fill: $green;
+		}
+
+		li a:hover .style0 {
+			fill: $blue;
+		}
+
+		p, .access {
+			color: $gray;
+		}
 	}
 }
 
@@ -149,6 +291,10 @@ body {
 
 .x-navbar-inner {
 	border-bottom: 1px solid $green;
+
+	h2 {
+		display: none;
+	}
 }
 
 .x-navbar .x-brand {
@@ -181,16 +327,19 @@ body {
 
 	li {
 		height: 54px;
+		text-align: center;
+		@include rem(line-height, 54px);
 	}
 }
 
 .x-navbar .x-nav > li > a {
 	position: relative;
-	display: block;
-	height: 100%;
+	display: inline-block;
+	height: 54px;
+	@include rem(line-height, 32px);
 	padding: 12px;
 	text-transform: uppercase;
-	text-align: center;
+	// text-align: center;
 	@include fw(semibold);
 	@include rem(font-size, 14px);
 
@@ -255,6 +404,9 @@ body {
 	.x-navbar {
 		height: auto;
 	}
+	.x-navbar .x-brand svg {
+		margin: 0;
+	}
 	.collapse {display: none; visibility: hidden;}
 	.collapse.in {display: block; visibility: visible;}
 	.collapsing {position: relative; height: 0; overflow: hidden; transition: all .35s ease;}
@@ -262,15 +414,59 @@ body {
 	.x-nav-collapse .x-nav{float:none;}
 	.x-nav-collapse,.x-nav-collapse.collapse{overflow:hidden;height:0}
 	.x-btn-navbar{
-		display:inline-block;
-		float:right;
 		// padding:0.458em 0.625em;
 		@include rem(font-size, 2rem);
 		@include rem(line-height, 3rem);
 		height: 54px;
 		line-height: 54px;
+		text-align: right;
 		&:hover {
 			text-decoration: none;
+		}
+	}
+	.x-navbar-inner > div {
+		display: table;
+		width: 100%;
+	}
+	.x-navbar-inner > div > h2, .x-navbar .x-brand, .x-btn-navbar  {
+		display: table-cell;
+		float: none;
+		vertical-align: middle;
+		width: 25%;
+		height: 54px;
+	}
+
+	.x-navbar-inner > div > h2 {
+		width: 50%;
+		text-align: center;
+		line-height: 0;
+
+		span {
+			position: relative;
+			height: 100%;
+			padding: 12px;
+			text-transform: uppercase;
+			text-align: center;
+			@include fw(semibold);
+			@include rem(font-size, 14px);
+			color: $blue;
+			font-family: $baseFontFamily;
+			font-style: normal;
+			display: inline-block;
+			height: 54px;
+			@include rem(line-height, 32px);
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background: $green;
+				transition: all 0.3s ease-in-out;
+			}
 		}
 	}
 }

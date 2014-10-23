@@ -1,0 +1,65 @@
+.contact-up {
+	border-top: 5px solid $green;
+
+	.container {
+		padding: 0 0 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.map {
+		width: 100%;
+
+		iframe {
+			width: 100%;
+			height: 350px;
+			display: block;
+		}
+	}
+
+	.contact {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+
+		& > div {
+			flex-basis: 50%;
+		}
+	}
+
+	.fermer {
+		display: block;
+		text-indent: -9999px;
+		width: 37px;
+		height: 37px;
+		position: relative;
+		transition: transform .2s ease-in-out;
+		transform: rotate(45deg);
+		cursor: pointer;
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			background: $green;
+			display: block;
+		}
+
+		&:before {
+			left: 18px;
+			width: 1px;
+			height: 100%;
+		}
+
+		&:after {
+			top: 18px;
+			height: 1px;
+			width: 100%;
+		}
+
+		&:hover {
+			transform: rotate(225deg);
+		}
+	}
+}

@@ -33,20 +33,41 @@ var Egzpo = {
         var $this       = $(this);
         var $body       = $('body');
         var $navbar     = $('.x-navbar');
+        var $prehead    = $('.prehead');
         var $navbarWrap = $('.x-navbar-wrap');
+        var $contactUp  = $('.contact-up');
+        var $contact    = $('.x-nav li:last-child a');
+        var $fermer     = $('.fermer');
 
         $window.scroll(function() {
           var $menutop = $navbarWrap.offset().top - $navbar.outerHeight();
           var $current = $this.scrollTop();
           if ($current >= $menutop) {
             $navbar.addClass('x-navbar-fixed-top');
+            $prehead.addClass('prehead-fixed');
           } else {
             $navbar.removeClass('x-navbar-fixed-top');
+            $prehead.removeClass('prehead-fixed');
           }
         });
 
+        $contactUp.hide();
+
         $('.x-btn-navbar').click(function(e){
           e.preventDefault();
+        });
+  
+        $contact.click(function(e){
+          e.preventDefault();
+          $('.x-nav-collapse').collapse('hide');
+          $contactUp.slideToggle();
+          $body.scrollTop(0);
+        });
+  
+        $fermer.click(function(e){
+          e.preventDefault();
+          $contactUp.slideToggle();
+          $body.scrollTop(0);
         });
 
       });

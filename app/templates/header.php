@@ -1,7 +1,37 @@
+<section class="contact-up blue">
+	<div class="container">
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2626.80437306752!2d2.6336919000000005!3d48.8237939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60f89e919c635%3A0xfd4b1432d237a7d4!2s56+Boulevard+Courcerin%2C+77183+Croissy-Beaubourg%2C+France!5e0!3m2!1sfr!2sfr!4v1414104344430" frameborder="0" style="border:0"></iframe>
+		</div>
+		<div class="contact">
+			<div class="infos">
+				<h1>Nous contacter</h1>
+				<h2>Conseil &amp; Accompagnement</h2>
+			</div>
+
+			<div class="form">
+			</div>
+		</div>
+		<span class="fermer"></span>
+	</div>
+</section>
+
 <header class="banner" role="banner">
   <div class="prehead">
     <div class="container">
-      <a href="#">Accès client</a>
+      <div>
+      	<a href="#" class="access">Accès client</a>
+      </div>
+      <div>
+        <p>Nous joindre : 01 64 66 30 00</p>
+  		<ul>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'facebook.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'twitter.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'google+.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'youtube.svg'); ?></a></li>
+          <li><a href="#"><?php get_template_part('assets/img/svg/inline', 'instagram.svg'); ?></a></li>
+  		</ul>	
+      </div>
     </div>
   </div>
 
@@ -13,12 +43,15 @@
     <div class="x-navbar">
       <div class="x-navbar-inner container">
         
-        <h1 class="visuallyhidden">X</h1>
+        <h1 class="visuallyhidden">Neocom</h1>
+        <div>
         <a href="<?php echo esc_url(home_url('/')) ?>" class="x-brand text" title="Neocom"><svg xmlns="http://www.w3.org/2000/svg" width="287.464" height="231.757" viewBox="0 0 287.464 231.757"><g><g><path fill="#003E52" d="M183.737 62.538v169.146l103.727-62.54V0L183.737 62.538z"/><path fill="#9EE9C5" d="M3.427 62.842l171.23 167.49V65.536L107.656 0 3.426 62.842z"/><path fill="#003E52" d="M0 73.074v158.684l100.3-60.482L0 73.074z"/></g></g></svg></a>        
+        <h2><span><?php echo egzpo_title(); ?></span></h2>
         <a href="#" class="x-btn-navbar collapsed" data-toggle="collapse" data-target=".x-nav-collapse">
           <!-- <i class="x-icon-bars"></i><span class="visuallyhidden">Menu</span> -->
           Menu
         </a>
+        </div>
 
         <nav class="x-nav-collapse collapse" role="navigation">
         <?php
