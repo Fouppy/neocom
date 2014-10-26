@@ -51,6 +51,10 @@ body {
 		top: 0;
 	}
 
+	.home &.prehead-absolute {
+		position: absolute;
+	}
+
 	.container {
 		display: table;
 
