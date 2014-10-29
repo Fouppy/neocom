@@ -1,16 +1,14 @@
 <div class="container main-content">
 	<section>
-	<?php while (have_posts()) : the_post(); ?>
-	  <?php the_content(); ?>
-	<?php endwhile; ?>
+		<h4><?php the_field('titre_approche'); ?></h4>
+		<?php the_field('approche'); ?>
+		<br><br>
+		<h4><?php the_field('titre_solutions'); ?></h4>
+		<?php the_field('solutions'); ?>
 	</section>
 	<aside class="sidebar">
-		<h4>Outcome</h4>
-		<ul class="outcome">
-			<?php for($i = 0, $size = count(get_post_meta($post->ID, 'outcome')); $i < $size; ++$i) { ?>
-			<li><?php echo get_post_meta($post->ID, 'outcome')[$i]; ?></li>
-			<?php } ?>
-		</ul>
+		<h4><?php the_field('titre_outcome'); ?></h4>
+		<?php the_field('outcome'); ?>
 	</aside>
 </div>
 

@@ -49,8 +49,7 @@
         <a href="<?php echo esc_url(home_url('/')) ?>" class="x-brand text" title="Neocom"><svg xmlns="http://www.w3.org/2000/svg" width="287.464" height="231.757" viewBox="0 0 287.464 231.757"><g><g><path fill="#003E52" d="M183.737 62.538v169.146l103.727-62.54V0L183.737 62.538z"/><path fill="#9EE9C5" d="M3.427 62.842l171.23 167.49V65.536L107.656 0 3.426 62.842z"/><path fill="#003E52" d="M0 73.074v158.684l100.3-60.482L0 73.074z"/></g></g></svg></a>        
         <h2><span><?php echo egzpo_title(); ?></span></h2>
         <a href="#" class="x-btn-navbar collapsed" data-toggle="collapse" data-target=".x-nav-collapse">
-          <!-- <i class="x-icon-bars"></i><span class="visuallyhidden">Menu</span> -->
-          Menu
+          <i class="x-icon-bars"></i><span class="visuallyhidden">Menu</span>
         </a>
         </div>
 

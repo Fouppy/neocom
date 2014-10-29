@@ -1,7 +1,8 @@
 // Buttons
 .btn {
 	color: $blue;
-	padding: 0.5rem;
+	padding: 1rem 0.5rem;
+	display: inline-block;
 	@include rem(font-size, 24px);
 	@include fw(semibold);
 	text-transform: uppercase;

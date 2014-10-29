@@ -11,6 +11,10 @@
 	background: $blue;
 	color: $white;
 
+	&.wb {
+		background-image: url('../img/bkg/bkg-blue.png');
+	}
+
 	h1 {
 		color: $white;
 	}

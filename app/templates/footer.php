@@ -1,7 +1,7 @@
 <footer class="content-info blue" role="contentinfo">
   <div class="container">
   	<h1>N'hésitez pas à prendre contact</h1>
-  	<a class="btn" data-effeckt-type="fill-from-top" href="#"><span class="btn-label">Nous contacter</span></a>
+  	<a class="btn contactez" data-effeckt-type="fill-from-top" href="#"><span class="btn-label">Nous contacter</span></a>
   	<div class="contact-info">
   		<div>
   			<h2>Groupe neocom SAS</h2>

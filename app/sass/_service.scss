@@ -84,4 +84,29 @@
 		padding: 1rem .5rem;
 		text-align: center;
 	}
+
+	.pictos {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		margin-top: 30px;
+
+		@include breakpoint(tablet) {
+			margin-top: 50px;
+		}
+
+		li {
+			display: inline-block;
+			// margin: 0 20px;
+			width: 33.33%;
+			max-width: 166px;
+			padding: 0 20px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
 }

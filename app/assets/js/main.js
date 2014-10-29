@@ -37,6 +37,7 @@ var Egzpo = {
         var $navbarWrap = $('.x-navbar-wrap');
         var $contactUp  = $('.contact-up');
         var $contact    = $('.x-nav li:last-child a');
+        var $contactez  = $('.contactez');
         var $fermer     = $('.fermer');
 
         $contactUp.hide();
@@ -48,15 +49,22 @@ var Egzpo = {
         $contact.click(function(e){
           e.preventDefault();
           $('.x-nav-collapse').collapse('hide');
+          $('html, body').animate({scrollTop:0});
           $contactUp.slideToggle();
-          $body.scrollTop(0);
+          $prehead.toggleClass('prehead-absolute');
+        });
+  
+        $contactez.click(function(e){
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0});
+          $contactUp.slideToggle();
           $prehead.toggleClass('prehead-absolute');
         });
   
         $fermer.click(function(e){
           e.preventDefault();
+          $('html, body').animate({scrollTop:0});
           $contactUp.slideToggle();
-          $body.scrollTop(0);
           $prehead.toggleClass('prehead-absolute');
         });
 
