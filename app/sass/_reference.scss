@@ -46,7 +46,12 @@
 	.post-next, .post-prev {
 		position: absolute;
 		top: 50%;
-		margin-top: -20px;
+		margin-top: -22px;
+		padding: 0.5rem;
+		@include breakpoint(biggie) {
+			padding: 1rem 0.5rem;
+			margin-top: -46px;
+		}
 	}
 
 	.post-next {

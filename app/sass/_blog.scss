@@ -1,0 +1,43 @@
+.blog {
+
+	.main > .container {
+		padding: 30px 0;
+
+		@include breakpoint(tablet) {
+			padding: 50px 0;
+		}
+
+		article {
+			@include breakpoint(biggie) {
+				width: 70%;
+				margin: 0 auto 35px;
+			}
+		}
+
+		article:last-child {
+			margin-bottom: 0;
+		}
+
+		h2 {
+			@include rem(line-height, 2rem);
+		}
+	}
+
+	time {
+		font-variant: small-caps;
+		display: inline-block;
+		margin-bottom: 15px;
+	}
+
+	.entry-summary {
+		text-align: right;
+
+		p {
+			text-align: left;
+		}
+
+		.btn {
+			margin-top: 15px;
+		}
+	}
+}

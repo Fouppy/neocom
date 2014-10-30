@@ -3,6 +3,7 @@
 	<div class="container">	
 		<h1><?php the_field('titre_agence'); ?></h1>
 		<h2><?php the_field('sous-titre_agence'); ?></h2>
+		<?php the_field('texte_agence'); ?>
         <a class="btn" data-effeckt-type="fill-from-top" href="<?php echo esc_url(get_permalink(get_page_by_title('Notre agence')));?>"><span class="btn-label"><?php the_field('lien_agence'); ?></span></a>
 	</div>
 

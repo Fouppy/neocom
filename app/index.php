@@ -1,4 +1,4 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php get_template_part('templates/page', 'header-blog'); ?>
 
 <?php if (!have_posts()) : ?>
   <div class="alert">
@@ -7,9 +7,11 @@
   <?php get_search_form(); ?>
 <?php endif; ?>
 
+<div class="container">
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', get_post_format()); ?>
 <?php endwhile; ?>
+</div>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
   <nav class="post-nav">

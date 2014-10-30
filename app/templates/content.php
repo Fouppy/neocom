@@ -5,5 +5,6 @@
   </header>
   <div class="entry-summary">
     <?php the_excerpt(); ?>
+	<a class="btn" data-effeckt-type="fill-from-top" href="<?php the_permalink(); ?>"><span class="btn-label">Lire la suite</span></a>
   </div>
 </article>

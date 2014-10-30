@@ -1,0 +1,81 @@
+.single-post {
+
+	.page-header {
+
+		.container {
+			position: relative;
+		}
+
+		h1 {
+			text-align: center;
+			@include rem(font-size, 2rem);
+			@include rem(line-height, 3rem);
+
+			@include breakpoint(biggie) {
+				@include rem(font-size, 60px);
+				@include rem(line-height, 60px);
+			}
+		}
+
+		time {
+			text-align: center;
+			display: block;
+			font-variant: small-caps;
+		}
+
+		.btn-label {
+			@include rem(font-size, 2rem);
+			@include rem(line-height, 1.5rem);
+
+			@include breakpoint(biggie) {
+				@include rem(font-size, 60px);
+				@include rem(line-height, 60px);
+			}
+		}
+	}
+
+	.post-next, .post-prev {
+		position: absolute;
+		top: 50%;
+		margin-top: -22px;
+		padding: 0.5rem;
+		@include breakpoint(biggie) {
+			padding: 1rem 0.5rem;
+			margin-top: -46px;
+		}
+	}
+
+	.post-next {
+		right: 0;
+	}
+
+	.post-prev {
+		left: 0;
+	}
+
+	article {
+		margin-top: 30px;
+		@include breakpoint(biggie) {
+			width: 70%;
+			margin: 50px auto 35px;
+		}
+	}
+
+	.page-nav {
+
+		margin: 30px 0;
+		display: flex;
+		justify-content: space-around;
+
+		@include breakpoint(biggie) {
+			width: 100%;
+			margin: 50px 0;
+		}
+
+		.bottom {
+			@include rem(padding, 1rem 0.5rem);
+			margin: 20px;
+		}
+	}
+
+}
